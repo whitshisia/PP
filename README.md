@@ -1,5 +1,5 @@
 # PP
-### The app is a simple personal portfolio, 10/04/2024
+### The app is a simple personal portfolio, 27/05/2024
 #### **By Whitney Shisia**
 ##  Description
    This is my personal portfolio 
