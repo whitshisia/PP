@@ -3,58 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whitney Shisia - Personal Webpage</title>
+    <title>Whitney Shisia - Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            background-color: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
         }
         .container {
             max-width: 800px;
             margin: 50px auto;
             padding: 20px;
-            background-color: #fff;
+            background-color: #1e1e1e;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fadeInUp 1s forwards;
         }
-        h1, h2, p {
-            margin: 0;
-            color: #333;
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #8a2be2;
+            animation: fadeIn 2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        p {
+            color: #8a2be2;
+        }
+        .navbar {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .navbar a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 15px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .navbar a:hover {
+            background-color: #8a2be2;
+            transform: scale(1.1);
         }
         .section {
             margin-bottom: 30px;
+        }
+        .section h2, .section h3 {
+            color: #8a2be2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            background-color: #2e2e2e;
+            margin: 5px 0;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+        }
+        ul li:hover {
+            transform: translateX(10px);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #8a2be2;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+        footer p {
+            margin: 0;
+            color: #8a2be2;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Whitney Shisia</h1>
+            <h1 id="logo"><span>Whitney Shisia</span></h1>
             <p>Software Engineer | Communication Analyst</p>
+            <img src="./images/20231224_092421.jpg" width="200" alt="Whitney Shisia">
         </header>
-        <section class="section">
-            <h2>About Me</h2>
-            <p>I am a software engineer with a passion for crafting clean and efficient code. Additionally, I specialize in communication analysis, leveraging my skills to enhance effective communication strategies.</p>
+        <nav class="navbar">
+            <div id="links">
+                <a href="./pages/about.html">About</a>
+                <a href="./pages/contacts.html">Contact Me</a>
+                <a href="./pages/projects.html">My Projects</a>
+            </div>
+        </nav>
+        <section id="about" class="section">
+            <h3>About</h3>
+            <p>Welcome to my personal portfolio. I am Whitney Shisia, a dedicated asspiring Software Engineer and Communication Analyst with a passion for developing innovative solutions and enhancing communication strategies.</p>
         </section>
-        <section class="section">
-            <h2>Contact Information</h2>
-            <p>Email: example@example.com</p>
-            <p>Phone: +1234567890</p>
-        </section>
-        <section class="section">
-            <h2>Skills</h2>
+        <section id="skills" class="section">
+            <h3>Skills</h3>
             <ul>
-                <li>Programming Languages: JavaScript, Python, Java</li>
+                <li>Programming Languages: JavaScript, Python</li>
                 <li>Web Development: HTML, CSS, React</li>
-                <li>Communication Analysis Techniques</li>
+                <li>Communication Techniques</li>
                 <li>Project Management</li>
             </ul>
         </section>
-        <section class="section">
-            <h2>Projects</h2>
-            <p>Coming soon...</p>
+        <section id="contact" class="section">
+            <h2>Contact Information</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                </tr>
+                <tr>
+                    <td>Whitney Shisia</td>
+                    <td><a href="mailto:shisiawhitney215@gmail.com">shisiawhitney215@gmail.com</a></td>
+                    <td><a href="tel:+254705719325">0705719325</a></td>
+                    <td>Nairobi, Kenya</td>
+                </tr>
+            </table>
         </section>
         <footer>
             <p>&copy; 2024 Whitney Shisia. All rights reserved.</p>
